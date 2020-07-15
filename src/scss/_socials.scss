@@ -1,0 +1,31 @@
+$social-size: 40px;
+$social-line-height: 55px;
+
+.social {
+    position: relative;
+    &__item {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    &__link {
+        display: inline-block;
+        width: $social-size;
+        height: $social-size;
+        padding: .5em;
+        @include font($fz: 2rem, $lh: 1);
+        @include tr;
+        @include hover {
+            color: $body-color;
+            transform: scale(1.2);
+        }
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        @include posA($bottom: 0, $left: calc(50% - #{$border-width}));
+        @include transform($delta_y: 0);
+        width: ($border-width * 2);
+        height: $social-line-height;
+        background-color: $primary-color;
+    }
+}

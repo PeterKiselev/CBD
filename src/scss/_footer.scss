@@ -1,0 +1,104 @@
+.footer {
+
+    &__lists {
+        @include flex($ali: initial);
+        flex-wrap: wrap;
+        color: $primary-color;
+
+        @media screen and (min-width: 576px) {
+            margin-top: $gap-footer * 2;
+        }
+    }
+    &__list {
+        padding: $gap-footer;
+        border-bottom: ($border-width * 2) solid $primary-color;
+
+        @media screen and (min-width: 576px) {
+            border-color: transparent;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        &--policy {
+            flex-basis: 100%;
+
+            @media screen and (min-width: 576px) {
+                flex-basis: calc((100% - #{$gap-footer}) / 2);
+            }
+        }
+        &--info {
+            flex-basis: 100%;
+            @media screen and (min-width: 576px) {
+                flex-basis: calc((100% - #{$gap-footer}) / 2);
+            }
+        }
+        &--social {
+            border-color: transparent;
+            order: 1;
+            flex-basis: 100%;
+            padding-bottom: calc(#{$social-line-height} + #{$gap-footer});
+
+            @media screen and (min-width: 576px) {
+                margin-top: $gap-footer;
+            }
+            @media screen and (min-width: 992px) {
+                order: 0;
+                margin-top: 0;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            flex-basis: calc((100% - (#{$gap-footer} * 2)) / 3);
+        }   
+    }
+    &__link {
+        white-space: nowrap;
+        @include font($fz: 1.4rem, $lh: 1.4);
+        text-transform: uppercase;
+        letter-spacing: $spaceX4;
+        padding: 1em;
+        display: inline-block;
+        @include tr;
+        @include hover {
+            color: $body-color;
+            text-shadow: 1px 0 $body-color;
+        }
+    }
+}
+
+.subscribe {
+    max-width: 370px;
+    margin: $gap-footer auto 0;
+
+    &__field {
+        margin-top: $gap-footer;
+        @include flex;
+        border: ($border-width * 2) solid $nav-primary-color;
+        height: ($gap-footer * 2);
+    }
+    &__input {
+        color: $primary-color;
+        border: none;
+        padding: 1.2em 2em;
+        width: 100%;
+        text-transform: capitalize;
+        background-color: transparent;
+        letter-spacing: $space;
+
+        &::placeholder {
+            font-size: 1.6rem;
+            color: $primary-color;
+            letter-spacing: $spaceX4;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.copyright {
+    margin-top: ($gap-footer * 2);
+    color: $primary-color;
+    letter-spacing: $spaceX4;
+    text-transform: uppercase;
+}
+

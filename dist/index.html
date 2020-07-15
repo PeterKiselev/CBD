@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/260e80cfa3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Cbd</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu nav__menu">
+                <li class="menu__item">
+                    <a href="#intro" class="menu__link menu__link--active">home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#products" class="menu__link">Products</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#faqs" class="menu__link">FAQs</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contacts" class="menu__link contactLink">Contact Us</a>
+                </li>
+            </ul>
+            <div class="nav__toggler">
+                <a href="#" class="toggler" onclick="toggleMenu(event)">
+                    <span></span>
+                </a>
+            </div>
+            <div class="nav__logo">
+                <a href="index.html" class="logo">cbd</a>
+            </div>
+            <ul class="user nav__user">
+                <li class="user__item">
+                    <a href="#" class="user__link">
+                        <i class="fas fa-user"></i>
+                        <span>login</span>
+                    </a>
+                </li>
+                <li class="user__item user__form">
+                    <form action="#" method="GET" class="form user__link">
+                        <label class="form__label" for="search">
+                            <svg width="30" height="30">
+                                <use xlink:href="#loupe"></use>
+                            </svg>
+                        </label>
+                        <input type="search" class="form__field" name="search" id="search" placeholder="search">
+                        <button type="submit" hidden></button>
+                    </form>
+                </li>
+                <li class="user__item">
+                    <a href="#" class="user__link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>
+                            cart
+                            <span class="count">(0)</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section section--intro section--bg" id="intro">
+            <span class="text-out text-out--line">CBD Potion health</span>
+            <div class="container">
+                <div class="section__content section__content--intro">
+                    <h1 class="title title--main">Enhancing Life Excelling in Care</h1>
+                    <p class="subtitle">Choose Wisely. Choose CBD.</p>
+                    <a href="#" class="btn text-line" target="_blank" rel="noopener noreferrer">
+                        Start Shopping
+                    </a>
+                    <a href="#" class="section__btn section__btn--intro" target="_blank" rel="noopener noreferrer">
+                        <span>See all products</span>
+                        <svg width="20" height="10">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <a href="#about" class="arrow-down">
+                <svg width="30" height="16">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+            </a>
+        </section>
+        <section class="section section--about" id="about">
+            <div class="container">
+                <div class="trust">
+                    <h2 class="title title--md trust__title">We are what we are</h2>
+                    <ul class="trust__partners partners">
+                        <li class="partners__item">
+                            <a class="partners__link" href="#" target="_blank" rel="noopener noreferrer">
+                                <img class="partners__img" src="../img/trust-icon-logo-1.png" alt="100% all natural">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#" target="_blank" rel="noopener noreferrer">
+                                <img class="partners__img" src="../img/trust-icon-logo-2.png" alt="zero high">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#" target="_blank" rel="noopener noreferrer">
+                                <img class="partners__img" src="../img/trust-icon-logo-3.png" alt="ships to all 50 states">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#" target="_blank" rel="noopener noreferrer">
+                                <img class="partners__img" src="../img/trust-icon-logo-4.png" alt="lab tested">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section__tabs">
+                    <div class="tabs-block">
+                        <input class="tabs-block__field" type="radio" name="tab" id="tab-1" checked>
+                        <input class="tabs-block__field" type="radio" name="tab" id="tab-2">
+                        <input class="tabs-block__field" type="radio" name="tab" id="tab-3">
+            
+                        <nav class="tabs">
+                            <label class="tab tab--1 title title--section tab__title" for="tab-1">
+                                WHAT IS CBD?
+                            </label>
+                            <label class="tab tab--2 title title--section tab__title" for="tab-2">
+                                BENEFITS
+                            </label>
+                            <label class="tab tab--3 title title--section tab__title" for="tab-3">
+                                OUR DIFFERENCE
+                            </label>
+                        </nav>
+            
+                        <div class="tabs-body">
+                            <article class="article article--about">
+                                <div class="article__description">
+                                    <h3 class="title title--md article__title">WHAT IT IS AND HOW IT WORKS</h3>
+                                    <p class="article__text">CBD is short for cannabidiol. It is a phytocannabinoid found in hemp and known for supporting the body and mind in many ways.* Charlotte’s Web products have cannabinoids with CBD extract.</p>
+                                    <p class="article__text">Not to be confused with oil from hemp seeds (which doesn’t contain cannabinoids), CBD comes from the flowers and leaves of the hemp plant.</p>
+                                    <p class="article__text">Why does CBD work? The human body has a vast network of receptors, the endocannabinoid system.</p>
+                                </div>
+                                <div class="article__img-wrap">
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="../img/about-img-1.jpg" alt="CBD how works">
+                                    </div>
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="../img/about-img-2.jpg" alt="CBD how works">
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="article article--benefits">
+                                <div class="article__description">
+                                    <h3 class="title title--md article__title">benefits</h3>
+                                    <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veniam, porro assumenda accusantium velit laudantium dolore qui eius dignissimos nihil.</p>
+                                    <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus animi voluptatum officia voluptatem at impedit ea explicabo, deleniti quis quos, nam dolorem obcaecati aliquid, libero quisquam numquam ad reprehenderit ratione?</p>
+                                    <p class="article__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, itaque?</p>
+                                </div>
+                                <div class="article__img-wrap">
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="https://picsum.photos/800/600" alt="benefits">
+                                    </div>
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="https://picsum.photos/900/600" alt="benefits">
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="article article--difference">
+                                <div class="article__description">
+                                    <h3 class="title title--md article__title">our difference</h3>
+                                    <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quas eaque nostrum similique quam dolore accusantium beatae, sint nihil eos minus aperiam, suscipit, alias saepe!</p>
+                                    <p class="article__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus incidunt ullam neque numquam provident doloribus cum, vel, laudantium quam voluptatibus corporis tempora sed obcaecati possimus libero eum, magnam asperiores. Veniam culpa at praesentium minus fugiat!</p>
+                                </div>
+                                <div class="article__img-wrap">
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="https://picsum.photos/640/480" alt="benefits">
+                                    </div>
+                                    <div class="article__img-block">
+                                        <img class="article__img" src="https://picsum.photos/1024/768" alt="benefits">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--products section--center" id="products">
+            <h2 class="title title--section section__title">cbd featured products</h2>
+            <div class="container-slider">
+                <div class="swiper-container swiper-container--products">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <a href="#" class="product__link">
+                                    <div class="product__description">
+                                        <ul class="product__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <h4 class="title title-sm product__title">CBD 500 mg Orange Flavor Tincture</h4>
+                                        <div class="product__img-wrap">
+                                            <img src="../img/products-img-1.jpg" alt="product 1" class="product__img">
+                                        </div>
+                                    </div>
+                                    <div class="product__footer">
+                                        <div class="product__price">$49.99 usd</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn--fill product__btn" target="_blank" rel="noopener noreferrer">
+                                    <span>Shop</span>
+                                    <span class="line"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <a href="#" class="product__link">
+                                    <div class="product__description">
+                                        <ul class="product__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <h4 class="title title-sm product__title">Black ICE CBD Muscle Rub 200 mg</h4>
+                                        <div class="product__img-wrap">
+                                            <img src="../img/products-img-2.jpg" alt="product 2" class="product__img">
+                                        </div>
+                                    </div>
+                                    <div class="product__footer">
+                                        <div class="product__price">$49.99 usd</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn--fill product__btn" target="_blank" rel="noopener noreferrer">
+                                    <span>Shop</span>
+                                    <span class="line"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <a href="#" class="product__link">
+                                    <div class="product__description">
+                                        <ul class="product__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <h4 class="title title-sm product__title">CBD+Curcumin Coffee 750 mg</h4>
+                                        <div class="product__img-wrap">
+                                            <img src="../img/products-img-3.jpg" alt="product 3" class="product__img">
+                                        </div>
+                                    </div>
+                                    <div class="product__footer">
+                                        <div class="product__price">$79.99 usd</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn--fill product__btn" target="_blank" rel="noopener noreferrer">
+                                    <span>Shop</span>
+                                    <span class="line"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-prev">
+                        <svg width="40" height="20">
+                            <use xlink:href="#arrow-prev"></use>
+                        </svg>
+                    </div>
+                    <div class="button-next">
+                        <svg width="40" height="20">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <script>
+            
+        </script>
+        <section class="section section--faqs" id="faqs">
+            <div class="container">
+                <div class="faqs-wrap">
+                    <h2 class="title title--section">Frequently asked questions</h2>
+                    <div class="faqs"> 
+                        <div class="faqs__tab question">
+                            <input type="checkbox" class="question__field" id="tab1" name="tab-group">
+                            <label for="tab1" class="question__title">What is Cannabidiol (CBD)?</label> 
+                            <div class="question__content"> 
+                                <p class="question__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi tempore, obcaecati libero perferendis dolorum velit laboriosam itaque nihil accusamus praesentium? Minima possimus tenetur id nihil?</p>
+                            </div> 
+                        </div> 
+                        <div class="faqs__tab question">
+                            <input class="question__field" type="checkbox" id="tab2" name="tab-group">
+                            <label for="tab2" class="question__title">Is Hemp-Derived Cannabidiol (CBD) Legal?</label> 
+                            <div class="question__content">
+                                <p class="question__text">Because CBD from hemp has no psychoactive effects, the purchase, sales, or possession of hemp CBD products are completely legal in all 50 States.</p> 
+                            </div>
+                        </div> 
+                        <div class="faqs__tab question">
+                            <input class="question__field" type="checkbox" id="tab3" name="tab-group">
+                            <label for="tab3" class="question__title">Are there any negative side effects?</label> 
+                            <div class="question__content">
+                                <p class="question__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi iusto nihil deleniti incidunt assumenda minima iste maxime culpa natus!</p> 
+                            </div>
+                        </div>
+                        <div class="faqs__tab question">
+                            <input class="question__field" type="checkbox" id="tab4" name="tab-group">
+                            <label for="tab4" class="question__title">Do you offer a return policy?</label> 
+                            <div class="question__content">
+                                <p class="question__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ea minima voluptatem ratione laboriosam. Voluptates perferendis ex consequatur, veniam rerum facilis deserunt accusamus molestias. Facere similique repellat distinctio nostrum beatae!</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+        <section class="section section--center section--testimonials" id="testimonials">
+            <h2 class="visually-hidden">Testimonials</h2>
+            <div class="swiper-container swiper-container--testimonials">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure class="testimonial">
+                            <picture class="testimonial__img-wrap">
+                                <source srcset="../img/testimonials-img-sm.jpg" media="(max-width: 425px)">
+                                <source srcset="../img/testimonials-img-md.jpg" media="(max-width: 768px)">
+                                <source srcset="../img/testimonials-img-lg.jpg" media="(max-width: 1024px)">
+                                <img src="../img/testimonials-img.jpg" alt="testimonials mark">
+                            </picture>
+                            <figcaption class="testimonial__blockquote-block">
+                                <div class="container">
+                                    <blockquote class="testimonial__blockquote-wrap">
+                                        <ul class="testimonial__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p class="testimonial__blockquote">I have tried another product after using this one successfully, and I am Back for good! The flavour, the lightness of the oil and the health benefits I have gotten with this oil are amazing!</p>
+                                    </blockquote>
+                                    <cite class="testimonial__cite text-line text-line--left">
+                                        mark j.
+                                    </cite>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="testimonial">
+                            <picture class="testimonial__img-wrap">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/600" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="../img/testimonials-img-2.jpg" alt="about monticello">
+                            </picture>
+                            <figcaption class="testimonial__blockquote-block">
+                                <div class="container">
+                                    <blockquote class="testimonial__blockquote-wrap">
+                                        <ul class="testimonial__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p class="testimonial__blockquote">I have tried another product after using this one successfully, and I am Back for good! The flavour, the lightness of the oil and the health benefits I have gotten with this oil are amazing!</p>
+                                    </blockquote>
+                                    <cite class="testimonial__cite">
+                                        <span class="line"></span>
+                                        <span>mark j.</span>
+                                    </cite>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="testimonial">
+                            <picture class="testimonial__img-wrap">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img src="../img/testimonials-img-3.jpg" alt="about monticello">
+                            </picture>
+                            <figcaption class="testimonial__blockquote-block">
+                                <div class="container">
+                                    <blockquote class="testimonial__blockquote-wrap">
+                                        <ul class="testimonial__stars stars" data-stars="5">
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                            <li class="stars__star"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p class="testimonial__blockquote">I have tried another product after using this one successfully, and I am Back for good! The flavour, the lightness of the oil and the health benefits I have gotten with this oil are amazing!</p>
+                                    </blockquote>
+                                    <cite class="testimonial__cite">
+                                        <span class="line"></span>
+                                        <span>tom j.</span>
+                                    </cite>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="button-prev button-prev--bordered">
+                        <svg width="40" height="20">
+                            <use xlink:href="#arrow-prev"></use>
+                        </svg>
+                    </div>
+                    <div class="button-next button-next--bordered">
+                        <svg width="40" height="20">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <span class="text-out text-out--reverse">CBD every day</span>
+        </section>
+    </main>
+
+    <footer class="section section--center footer" id="contacts"> 
+        <div class="container">
+            <a href="index.html" class="logo logo--footer">cbd</a>
+            <div class="footer__lists">
+                <ul class="footer__list footer__list--policy policy">
+                    <li class="footer__item policy__item">
+                        <a class="footer__link policy__link" href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    </li>
+                    <li class="footer__item policy__item">
+                        <a class="footer__link policy__link" href="#" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+                    </li>
+                    <li class="footer__item policy__item">
+                        <a class="footer__link policy__link" href="#" target="_blank" rel="noopener noreferrer">Return Policy</a>
+                    </li>
+                </ul>
+                <ul class="footer__list footer__list--social social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://twitter.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.youtube.com//" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__list footer__list--info info">
+                    <li class="info__item">
+                        <a class="footer__link info__link" href="#" target="_blank" rel="noopener noreferrer">SHIPPING INFO</a>
+                    </li>
+                    <li class="info__item">
+                        <a class="footer__link info__link" href="#" target="_blank" rel="noopener noreferrer">RETURNS / EXCHANGES</a>
+                    </li>
+                    <li class="info__item">
+                        <a class="footer__link info__link" href="#" target="_blank" rel="noopener noreferrer">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="subscribe" method="POST" action="#">
+                <h4 class="title title--sm">Subscribe to Newsletter</h4>
+                <div class="subscribe__field">
+                    <input class="subscribe__input" type="email" name="email" placeholder="email">
+                    <button type="submit" class="subscribe__btn btn btn--arrows">
+                        <svg width="25" height="13">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <p class="copyright">©copy 2018. cbd health.</p>
+        </div>
+    </footer>
+    <svg style="display: none;">
+        <symbol id="loupe" viewBox="0 0 30 30">
+            <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/>
+        </symbol>
+        <symbol id="arrow-prev" viewBox="0 0 40 20">
+            <path d="M0.274,9.370 L0.274,9.370 L9.363,0.330 C9.689,-0.050 10.263,-0.094 10.644,0.231 C11.025,0.556 11.070,1.127 10.743,1.506 C10.713,1.541 10.680,1.574 10.644,1.604 L3.110,9.108 L39.091,9.108 C39.593,9.108 40.000,9.513 40.000,10.012 C40.000,10.512 39.593,10.916 39.091,10.916 L3.110,10.916 L10.644,18.410 C11.025,18.735 11.070,19.306 10.743,19.685 C10.417,20.064 9.843,20.109 9.462,19.784 C9.426,19.753 9.393,19.721 9.363,19.685 L0.274,10.645 C-0.078,10.292 -0.078,9.722 0.274,9.370 Z"/>
+        </symbol>
+        <symbol id="arrow-next" viewBox="0 0 20 10">
+            <path d="M19.863,4.661 L19.863,4.661 L15.319,0.134 C15.155,-0.056 14.868,-0.078 14.678,0.085 C14.487,0.247 14.465,0.533 14.628,0.723 C14.644,0.741 14.660,0.757 14.678,0.772 L18.445,4.530 L0.454,4.530 C0.203,4.530 -0.000,4.732 -0.000,4.983 C-0.000,5.233 0.203,5.435 0.454,5.435 L18.445,5.435 L14.678,9.188 C14.487,9.351 14.465,9.637 14.628,9.827 C14.792,10.016 15.078,10.039 15.269,9.876 C15.287,9.861 15.303,9.844 15.319,9.827 L19.863,5.300 C20.039,5.123 20.039,4.837 19.863,4.661 Z"/>
+        </symbol>
+        <symbol id="arrow-down" viewBox="0 0 30 16">
+            <path d="M29.695,0.304 C29.282,-0.109 28.610,-0.109 28.196,0.304 L15.013,13.474 L1.804,0.304 C1.390,-0.109 0.718,-0.109 0.305,0.304 C-0.109,0.716 -0.109,1.386 0.305,1.798 L14.237,15.690 C14.444,15.896 14.703,16.000 14.987,16.000 C15.245,16.000 15.530,15.896 15.737,15.690 L29.669,1.798 C30.109,1.386 30.109,0.716 29.695,0.304 Z"/>
+        </symbol>
+    </svg>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

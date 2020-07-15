@@ -1,0 +1,65 @@
+.section {
+    &--intro {
+        text-align: center;
+        color: $body-bg;
+        min-height: 100vh;
+        background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg.jpg);
+
+        @media screen and (max-width: 992px) {
+            background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg-md.jpg);
+        }
+        @media screen and (max-width: 576px) {
+            background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg-sm.jpg);
+        }
+
+        @media screen and (min-width: 768px) {
+            text-align: right;
+        }        
+    }
+
+    &__content {
+        &--intro {
+            margin-left: auto;
+            margin-right: 0;
+
+            @media screen and (min-width: 992px) {
+                max-width: 60%;
+            }
+        }
+    }
+
+    &__btn {
+        &--intro {
+            display: block;
+            margin-top: 20px;
+            letter-spacing: $spaceX4;
+            @include tr;
+            @include hover {
+                svg {
+                    fill: $body-color;
+                }
+                color: $body-color;
+            }
+            svg {
+                fill: $body-bg;
+                @include tr;
+            }
+        }
+        
+    }
+}
+
+.arrow-down {
+    display: inline-block;
+    @include posA($bottom: 0);
+    @include transform;
+    svg {
+        fill: $secondary-color;
+        @include tr;
+    }
+    @include hover {
+        svg {
+            fill: $body-color;
+        }
+    }
+}

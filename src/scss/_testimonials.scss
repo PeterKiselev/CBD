@@ -1,0 +1,115 @@
+.section {
+    &--testimonials {
+        padding: 0;
+        background-color: $testimonials-bg;
+        position: relative;
+
+        
+    }
+}
+
+.testimonial {
+    margin: 0;
+    // width: 100vw;
+    // width: 100%;
+    position: relative;
+    min-height: 100vh;
+    // overflow: hidden;
+    @include flex($jc: center);
+
+    &:before {
+        content: '';
+        @include posA(0,0,0,0);
+        background-color: rgba($gradint-bg, .6);
+        z-index: 1;
+    }
+
+    &__img-wrap {
+        display: block;
+        // height: 100%;
+        @include posA(0,0,0,0);
+        overflow: hidden;
+
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            @include posA($left: 0, $bottom: 0, $right: 0);
+        }
+    }
+
+    &__stars {
+        font-size: inherit;
+    }
+
+    &__blockquote-block {
+        position: relative;
+        z-index: 5;
+        letter-spacing: $spaceX3;
+        max-width: 830px;
+        
+
+        @media screen and (min-width: 576px) {
+            padding: 0 30px;
+        }
+    }
+
+    &__blockquote-wrap {
+        margin: 0;
+        
+    }
+    &__blockquote {
+        margin-top: 30px;
+        color: $secondary-color;
+        
+    }
+    &__cite {
+    //     position: relative;
+    //     display: inline-block;
+
+    //     &:before {
+    //         content: '';
+    //         display: inline-block;
+    //         @include posA(calc(50% - #{$border-width}), $left: -65px);
+    //         width: $line-width;
+    //         height: $border-width * 2;
+    //         background-color: $secondary-color;
+    //         @include tr;
+    //     }
+
+    //     color: $secondary-color;
+        font-style: normal;
+    //     text-transform: uppercase;
+    }
+}
+
+.swiper-buttons {
+    @include posA($left: 50%, $bottom: 0);
+    z-index: 20;
+    @include transform($delta_y: 0);
+    @include flex;
+}
+
+.button-prev--bordered, .button-next--bordered {
+    z-index: 3;
+    // margin: 10px;
+    height: 100px;
+    width: 130px;
+    // @include posA($bottom: 0);
+    // @include transform;
+    border: $border-width solid $secondary-color;
+    @include flex($jc: center);
+    margin: 0;
+
+    svg {
+        // vertical-align: middle;
+        fill: $secondary-color;
+    }
+}
+.button-prev--bordered {
+    // left: calc(50% );
+    // @include transform(-50%, 0);
+}
+.button-next--bordered {
+    // left: 50%;
+    // @include transform(-50%, 0);
+}

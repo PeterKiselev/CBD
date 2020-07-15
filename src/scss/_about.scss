@@ -1,0 +1,192 @@
+.section {
+    &__tabs {
+        margin-top: 100px;
+    }
+}
+
+.trust {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 12px solid #000;
+    border-image: url(../img/border-we-are.png) 12;
+    padding: 30px;
+
+    &__partners {
+        margin-top: 15px;
+    }
+}
+
+.partners {
+    overflow: hidden;
+    height: 60px;
+    @include flex($jc: center);
+
+    &__item {
+        flex-basis: 25%;
+    }
+    &__link {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        @include tr;
+        @include hover {
+            background-color: $tabs-primary-color;
+        }
+    }
+}
+
+.tabs-block {
+    &__field {
+        display: none;
+    }
+
+    &__field[id="tab-1"]:checked ~ .tabs .tab--1,
+    &__field[id="tab-2"]:checked ~ .tabs .tab--2,
+    &__field[id="tab-3"]:checked ~ .tabs .tab--3 {
+        &:after {
+            background-color: $title-color;
+        }
+    }
+
+    &__field[id="tab-1"]:checked ~ .tabs-body .article--about,
+    &__field[id="tab-2"]:checked ~ .tabs-body .article--benefits,
+    &__field[id="tab-3"]:checked ~ .tabs-body .article--difference {
+        display: flex;
+    }
+}
+
+.tabs {
+    margin: 0 auto;
+    @include flex($jc: start, $ali: stretch);
+    text-align: center;
+    border-bottom: $border-width * 2 solid $tabs-primary-color;
+
+    @media screen and (min-width: 768px) {
+        max-width: 85%;
+    }
+    @media screen and (min-width: 992px) {
+        max-width: 970px;
+    }
+}
+
+.tab {
+    @include flex;
+    cursor: pointer;  
+    @include tr;
+    border-bottom: $border-width * 2 solid transparent;
+    position: relative;
+    
+    & + & {
+        margin-left: 15px;
+
+        @media screen and (min-width: 576px) {
+            margin-left: 25px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-left: 50px;
+        }
+        @media screen and (min-width: 992px) {
+            margin-left: 100px;
+        }
+    }
+
+    &:after {
+        content: '';
+        @include posA($left: 0, $bottom: -2 * ($border-width * 2));
+        display: inline-block;
+        width: 100%;
+        height: $border-width * 2;
+        background-color: transparent;
+        @include tr;
+    }
+}
+
+.article  {
+    display: none;
+    min-height: 700px;
+    padding: 80px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @media screen and (min-width: 992px) {
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1400px) {
+        margin-left: 100px;
+        margin-right: -100px;
+    }
+
+    &__description {
+        @media screen and (min-width: 768px) {
+            flex-basis: 75%;
+        }
+        @media screen and (min-width: 992px) {
+            flex-basis: 50%;
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: 500px;
+            padding-right: 30px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        line-height: 1.6;
+        color: #000;
+
+        @media screen and (min-width: 992px) {
+            max-width: 300px;
+        }
+    }
+    &__text {
+        & + & {
+            margin-top: 30px;
+            @media screen and (min-width: 992px) {
+                margin-top: 50px;
+            }
+        }
+        
+        letter-spacing: .04em;
+        color: $primary-color;
+
+        @media screen and (min-width: 992px) {
+            padding-right: 70px;
+        }
+    }
+
+    &__img-wrap {
+        flex-basis: 570px;
+        margin-top: 30px;
+
+        @media screen and (min-width: 992px) {
+            flex-basis: 50%;
+            margin-top: 0;
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: 600px;
+            padding-left: 30px;
+        }
+    }
+
+    &__img-block {
+        background-color: $tabs-primary-color;
+        overflow: hidden;
+        position: relative;
+        padding-top: 53%;
+        & + & {
+            margin-top: 30px;
+        }
+    }
+
+    &__img {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}

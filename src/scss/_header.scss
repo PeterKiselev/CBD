@@ -1,0 +1,282 @@
+.header {
+    @include posA(0, 0, 0);
+    // position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    
+}
+
+.nav {
+    border-bottom: $border-width solid $secondary-color;
+    @include flex;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &__toggler {
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+    &__logo {
+        display: none;
+
+        @media screen and (min-width: 576px) {
+            display: block;
+        }
+    }
+}
+
+.menu {
+    white-space: nowrap;
+    font-size: 1.6rem;
+    line-height: 1;
+    height: 100vh;
+    background-color: rgba($primary-color, .8);
+    opacity: 0;
+
+    @include posA(0, 0, 0, 0);
+    z-index: 5;
+
+    @include flex($jc: center);
+    flex-direction: column;
+    
+    transform-origin: 15px 15px;
+    transform: translate(0, 0) scale(.1);
+    @include tr(.5s);
+    .menu-opened & {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    @media screen and (min-width: 992px) {
+        padding-left: 50px;
+        background-color: transparent;
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    &__item {
+        & + & {
+            margin-left: 35px;
+        }
+        .menu-opened & {
+            margin: 10px;
+        }
+    }
+    &__link {
+        letter-spacing: $space;
+        display: inline-block;
+        padding: .5em;
+        position: relative;
+
+        .menu-opened & {
+            padding: 1em;
+            font-size: 1.5em;
+        }
+
+        &:hover:before {
+            background-color: $nav-primary-color;
+            @include tr;
+        }
+
+        &:before {
+            content: '';
+            @include posA(50%, $left: 0);
+            display: inline-block;
+            width: 100%;
+            height: $border-width * 2;
+            background-color: transparent;
+            @include tr;
+        }
+
+        // &--active:before {
+        //     background-color: $nav-primary-color;
+        // }
+    }
+}
+
+.scrolled {
+    position: fixed;
+    background-color: rgba($primary-color, .5);
+    color: $body-color;
+    border-color: $primary-color;
+    bottom: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.active {
+    &:before {
+        background-color: #fff;
+    }
+}
+
+.toggler {
+    padding: 15px;
+    position: relative;
+    z-index: 10;
+    @include flex($jc: center);
+    width: 72px;
+    height: 72px;
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
+    span, span:before, span:after {
+        width: 100%;
+        height: $border-width * 3;
+        background-color: $secondary-color;
+    }
+
+    span {
+        @include tr;
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            @include posA;
+        }
+
+        &:before {
+            top: -15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+
+        &:after {
+            top: 15px;
+            transition: transform .3s ease-in, top .3s linear .3s;
+        }
+
+        .menu-opened & {
+            background-color: transparent;
+        }
+
+        .menu-opened &:before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+
+        .menu-opened &:after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: top .3s linear, transform .3s ease-in .3s;
+        }
+    }
+}
+
+.menu-opened {
+    overflow: hidden;
+}
+
+.user {
+    height: 100%;
+    @include flex;
+
+    &__item {
+        height: 100%;
+    }
+    &__link {
+        height: 100%;
+        padding: .75em;
+        font-size: 2rem;
+        letter-spacing: $space;
+        display: inline-flex;
+        align-items: center;
+        border-left: $border-width solid $secondary-color;
+        @include tr;
+        @include hover {
+            color: $primary-color;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.6rem;
+            padding: 1.4em 1em;
+        }
+
+        span {
+            display: none;
+
+            @media screen and (min-width: 992px) {
+                display: flex;
+            }
+            .count {
+                margin-left: 5px;
+            }
+        }
+        i {
+            line-height: inherit;
+            @media screen and (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+    &__form {
+        order: -1;
+
+        @media screen and (min-width: 992px) {
+            order: 0;
+        }
+    }
+
+    & svg {
+        vertical-align: middle;
+        fill: $secondary-color;
+    }
+}
+
+.form {
+    &__label {
+        display: none;
+        cursor: pointer;
+        svg {
+            @include tr;
+            @include hover {
+                fill: $primary-color;
+            }
+        }
+        @media screen and (min-width: 576px) {
+            display: block;
+        }
+    }
+    &__label:hover + &__field::placeholder {
+        color: rgba($primary-color, .5);
+    }
+    &__field {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        color: $secondary-color;
+        outline: none;
+        @include tr;
+        line-height: inherit;
+
+        @media screen and (min-width: 576px) {
+            margin-left: 5px;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+            color: $secondary-color;
+            @include tr;
+        }
+
+        @include hover {
+            &::placeholder {
+                color: rgba($primary-color, .5);
+            }
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }        
+    }
+}

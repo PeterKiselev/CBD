@@ -1,0 +1,54 @@
+<header class="header">
+    <nav class="nav">
+        <ul class="menu nav__menu">
+            <li class="menu__item">
+                <a href="#intro" class="menu__link menu__link--active">home</a>
+            </li>
+            <li class="menu__item">
+                <a href="#products" class="menu__link">Products</a>
+            </li>
+            <li class="menu__item">
+                <a href="#faqs" class="menu__link">FAQs</a>
+            </li>
+            <li class="menu__item">
+                <a href="#contacts" class="menu__link contactLink">Contact Us</a>
+            </li>
+        </ul>
+        <div class="nav__toggler">
+            <a href="#" class="toggler" onclick="toggleMenu(event)">
+                <span></span>
+            </a>
+        </div>
+        <div class="nav__logo">
+            <a href="index.html" class="logo">cbd</a>
+        </div>
+        <ul class="user nav__user">
+            <li class="user__item">
+                <a href="#" class="user__link">
+                    <i class="fas fa-user"></i>
+                    <span>login</span>
+                </a>
+            </li>
+            <li class="user__item user__form">
+                <form action="#" method="GET" class="form user__link">
+                    <label class="form__label" for="search">
+                        <svg width="30" height="30">
+                            <use xlink:href="#loupe"></use>
+                        </svg>
+                    </label>
+                    <input type="search" class="form__field" name="search" id="search" placeholder="search">
+                    <button type="submit" hidden></button>
+                </form>
+            </li>
+            <li class="user__item">
+                <a href="#" class="user__link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>
+                        cart
+                        <span class="count">(0)</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
