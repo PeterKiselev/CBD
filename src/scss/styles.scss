@@ -139,13 +139,12 @@ body {
 
     &--left {
         &:after {
-            right: 100px;
+            right: 125%;
         }
     }
 }
 
 .btn {
-    // text-align: center;
     @include flex($df: inline-flex);
     @include font(null, 2rem, $secondary-color, 400, 1);
     max-width: 270px;
@@ -158,8 +157,6 @@ body {
     cursor: pointer;
     @include tr;
     position: relative;
-
-    
 
     @include hover {
         color: $primary-color;
@@ -176,7 +173,7 @@ body {
     }
     &--arrows {
         color: $primary-color;
-        max-width: ($gap-footer * 3);
+        max-width: ($gap * 3);
         border-color: transparent;
         min-height: auto;
         height: 100%;
@@ -185,11 +182,6 @@ body {
 
         svg {
             fill: $primary-color;
-            width: 100%;
-        }
-
-        &:after {
-            display: none;
         }
         &:before {
             content: '';

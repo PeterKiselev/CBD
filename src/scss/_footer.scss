@@ -1,16 +1,15 @@
 .footer {
-
     &__lists {
         @include flex($ali: initial);
         flex-wrap: wrap;
         color: $primary-color;
 
         @media screen and (min-width: 576px) {
-            margin-top: $gap-footer * 2;
+            margin-top: $gap * 2;
         }
     }
     &__list {
-        padding: $gap-footer;
+        padding: $gap;
         border-bottom: ($border-width * 2) solid $primary-color;
 
         @media screen and (min-width: 576px) {
@@ -23,23 +22,23 @@
             flex-basis: 100%;
 
             @media screen and (min-width: 576px) {
-                flex-basis: calc((100% - #{$gap-footer}) / 2);
+                flex-basis: calc((100% - #{$gap}) / 2);
             }
         }
         &--info {
             flex-basis: 100%;
             @media screen and (min-width: 576px) {
-                flex-basis: calc((100% - #{$gap-footer}) / 2);
+                flex-basis: calc((100% - #{$gap}) / 2);
             }
         }
         &--social {
             border-color: transparent;
             order: 1;
             flex-basis: 100%;
-            padding-bottom: calc(#{$social-line-height} + #{$gap-footer});
+            padding-bottom: calc(#{$social-line-height} + #{$gap});
 
             @media screen and (min-width: 576px) {
-                margin-top: $gap-footer;
+                margin-top: $gap;
             }
             @media screen and (min-width: 992px) {
                 order: 0;
@@ -47,7 +46,7 @@
             }
         }
         @media screen and (min-width: 992px) {
-            flex-basis: calc((100% - (#{$gap-footer} * 2)) / 3);
+            flex-basis: calc((100% - (#{$gap} * 2)) / 3);
         }   
     }
     &__link {
@@ -67,13 +66,13 @@
 
 .subscribe {
     max-width: 370px;
-    margin: $gap-footer auto 0;
+    margin: $gap auto 0;
 
     &__field {
-        margin-top: $gap-footer;
+        margin-top: $gap;
         @include flex;
         border: ($border-width * 2) solid $nav-primary-color;
-        height: ($gap-footer * 2);
+        height: ($gap * 2);
     }
     &__input {
         color: $primary-color;
@@ -96,7 +95,7 @@
 }
 
 .copyright {
-    margin-top: ($gap-footer * 2);
+    margin-top: ($gap * 2);
     color: $primary-color;
     letter-spacing: $spaceX4;
     text-transform: uppercase;

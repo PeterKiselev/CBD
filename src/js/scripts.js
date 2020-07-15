@@ -58,13 +58,13 @@ var swiperTestimonials = new Swiper('.swiper-container--testimonials', {
     loop: true,
     effect: 'fade',
     lazy: true,
-    // autoplay: {
-    //     delay: 3500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
     navigation: {
-        nextEl: '.button-next',
-        prevEl: '.button-prev',
+        nextEl: '.swiper-buttons__next',
+        prevEl: '.swiper-buttons__prev',
     },
  
 });
@@ -74,7 +74,7 @@ var swiperTestimonials = new Swiper('.swiper-container--testimonials', {
 $(window).scroll(function() {
     var $sections = $('.section');
     $sections.each(function(i, el) {
-        var top  = $(el).offset().top-300;
+        var top  = $(el).offset().top-400;
         var bottom = top +$(el).height();
         var scroll = $(window).scrollTop();
         var id = $(el).attr('id');
