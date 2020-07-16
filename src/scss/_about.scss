@@ -8,31 +8,41 @@
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
-    border: 12px solid #000;
+    border: 12px solid $primary-color;
     border-image: url(../img/border-we-are.png) 12;
-    padding: 30px;
+    padding: $gap;
 
     &__partners {
-        margin-top: 15px;
+        margin-top: $gap / 2;
     }
 }
 
 .partners {
-    overflow: hidden;
-    height: 60px;
-    @include flex($jc: center);
-
     &__item {
-        flex-basis: 25%;
+        display: inline-block;
+        margin: 10px;
+        max-width: 130px;
+        width: 100%;
     }
     &__link {
+        overflow: hidden;
+        position: relative;
         display: inline-block;
-        vertical-align: middle;
-        font-size: 0;
+        border: $border-width dashed transparent;
+        padding-top: 45%;
+        @include full;
         @include tr;
         @include hover {
             background-color: $tabs-primary-color;
+            border-radius: 10px;
+            border-color: $primary-color;
         }
+    }
+    &__img {
+        @include posA(50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
     }
 }
 
