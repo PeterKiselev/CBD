@@ -64,9 +64,10 @@
 
 .stars {
     font-size: 1.6rem;
+    color: $primary-color;
     &__star {
         display: inline-block;
-        color: $primary-color;
+        
 
         [data-stars="0"] &:nth-child(n + 1),
         [data-stars="1"] &:nth-child(n + 2),
@@ -79,14 +80,15 @@
 }
 
 .button-prev, .button-next {
-    display: inline-block;
-    cursor: pointer;
-    margin: 60px 30px 0;
-    @include tr;
-    svg {
-        fill: $primary-color;
-    }
-    @include hover {
-        transform: scale(1.2);
-    }
+    margin: $gap ($gap / 2) 0;
+//     display: inline-block;
+//     cursor: pointer;
+//     margin: 60px 30px 0;
+//     @include tr;
+//     svg {
+//         fill: $primary-color;
+//     }
+//     @include hover {
+//         transform: scale(1.2);
+//     }
 }

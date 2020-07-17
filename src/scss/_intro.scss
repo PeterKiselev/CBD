@@ -1,4 +1,9 @@
 .section {
+    .text-out {
+        left: 90px;
+        bottom: 123px;
+    }
+
     &--intro {
         text-align: center;
         color: $body-bg;

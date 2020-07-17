@@ -1,5 +1,5 @@
 $social-size: 40px;
-$social-line-height: 55px;
+$social-underline-height: 55px;
 
 .social {
     position: relative;
@@ -22,10 +22,10 @@ $social-line-height: 55px;
     &:after {
         content: '';
         display: inline-block;
-        @include posA($bottom: 0, $left: calc(50% - #{$border-width}));
+        @include posA($bottom: 0, $left: 50%);
         @include transform($delta_y: 0);
         width: ($border-width * 2);
-        height: $social-line-height;
+        height: $social-underline-height;
         background-color: $primary-color;
     }
 }

@@ -42,18 +42,14 @@ body {
     @include tr;
     @include hover {
         color: $primary-color;
-        @include tr;
     }
 
     &--footer {
+        font-size: 5rem;
         color: $primary-color;
-        font-size: 6rem;
 
-        @include hover {
-            color: $body-color;
-            &:before, &:after {
-                background-color: $body-color;
-            }
+        @media screen and (min-width: 576px) {
+            font-size: 6rem;
         }
 
         &:before, &:after {
@@ -61,18 +57,26 @@ body {
             @include posA($top: calc(50% - #{$border-width}));
             display: inline-block;
             width: calc((100% - 60px) / 3);
-            height: $border-width * 2;
+            height: ($border-width * 2);
             background-color: $primary-color;
             @include tr;
         }
         &:before { left: 0; }
         &:after { right: 0; }
+
+        @include hover {
+            color: $body-color;
+            &:before, &:after {
+                background-color: $body-color;
+            }
+        }
     }
 }
 
 .title {
     @include font($fc: $title-color, $fw: 400);
     text-transform: uppercase;
+    letter-spacing: $spaceX2;
     
     &--main {
         @include font($fz: 4.5rem, $fc: $body-bg, $lh: 1.35);
@@ -108,9 +112,6 @@ body {
         font-size: 2.4rem;
         letter-spacing: $spaceX3;
     }
-    &--sm {
-        letter-spacing: .15em;
-    }
 }
 
 .subtitle {
@@ -119,6 +120,96 @@ body {
     margin-top: 15px;
     margin-bottom: 45px;
     text-transform: capitalize;
+}
+
+.btn {
+    @include flex($df: inline-flex, $jc: center);
+    @include font(null, 2rem, $secondary-color, 400, 1);
+    background-color: transparent;
+    border: $border-width solid transparent;
+    max-width: 190px;
+    width: 100%;
+    min-height: 70px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    @include tr;
+    padding: 1em;
+
+    @include hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+        border-color: $primary-color;
+        &:after {
+            background-color: $primary-color;
+        }
+    }
+
+    &--intro {
+        max-width: 270px;
+        border-color: $nav-primary-color;
+        padding-right: calc(1.75em + #{$line-width});
+        padding-left: 1.75em;
+
+        &:hover {
+            background-color: rgba($secondary-color, .6);
+            border-color: $primary-color
+        }
+    }
+    
+    &--fill {
+        background-color: $primary-color;
+    }
+    &--arrows {
+        max-width: 70px;
+        padding: 0;
+
+        &:hover {
+            background-color: transparent;
+            border-color: transparent;
+            svg {
+                transform: scale(1.2);
+            }
+        }
+
+        svg {
+            fill: $primary-color;
+            @include tr;
+        }
+
+        &-white {
+            max-width: 130px;
+            min-height: 100px;
+            border-color: $secondary-color;
+            svg {
+                fill: $secondary-color;
+            }
+        }
+    }
+    &--form {
+        max-width: 90px;
+        min-height: 60px;
+        
+        &:before {
+            content: '';
+            display: inline-block;
+            @include posA(10%, $left: 0);
+            height: 80%;
+            width: $border-width * 2;
+            background-color: $nav-primary-color;
+            @include tr;
+        }
+
+        @include hover {
+            background-color: $primary-color;
+            svg {
+                fill: $body-bg;
+            }
+            &:before {
+                background-color: transparent;
+            }
+        }
+    }
 }
 
 .text-line {
@@ -136,70 +227,15 @@ body {
         background-color: $secondary-color;
         @include tr;
     }
-
     &--left {
         &:after {
             right: 125%;
         }
     }
-}
-
-.btn {
-    @include flex($df: inline-flex);
-    @include font(null, 2rem, $secondary-color, 400, 1);
-    max-width: 270px;
-    width: 100%;
-    min-height: 70px;
-    background-color: transparent;
-    border: $border-width solid $nav-primary-color;
-    padding: 1em calc(1.75em + #{$line-width}) 1em 1.75em;
-    text-transform: uppercase;
-    cursor: pointer;
-    @include tr;
-    position: relative;
-
-    @include hover {
-        color: $primary-color;
-        background-color: rgba($secondary-color, .6);
-        border-color: $primary-color;
+    &--lg {
         &:after {
-            background-color: $primary-color;
-        }
-    }
-
-    &--fill {
-        background-color: $primary-color;
-        max-width: 190px;
-    }
-    &--arrows {
-        color: $primary-color;
-        max-width: ($gap * 3);
-        border-color: transparent;
-        min-height: auto;
-        height: 100%;
-        justify-content: center;
-        padding: 1em;
-
-        svg {
-            fill: $primary-color;
-        }
-        &:before {
-            content: '';
-            display: inline-block;
-            @include posA(10%, $left: 0);
-            height: 80%;
-            width: $border-width * 2;
-            background-color: $nav-primary-color;
-            @include tr;
-        }
-        @include hover {
-            background-color: $primary-color;
-            svg {
-                fill: $body-bg;
-            }
-            &:before {
-                background-color: transparent;
-            }
+            width: ($line-width * 2);
+            right: 115%;
         }
     }
 }
@@ -207,47 +243,23 @@ body {
 .text-out {
     font-size: 2.6rem;
     text-transform: uppercase;
-    letter-spacing: .08em;
+    letter-spacing: $space;
     color: $secondary-color;
-    @include posA($bottom: 0, $left: $line-widthX2);
+    @include posA;
     transform-origin: bottom left;
     transform: rotate(-90deg);
     display: none;
     z-index: 5;
 
-    &--line {
-        bottom: calc(#{$line-widthX2} + 30px);
-        left: 100px;
-        &:before {
-            content: '';
-            display: inline-block;
-            @include posA(calc(50% - #{$border-width}), $left: calc(-#{$line-widthX2} - 30px));
-            width: $line-widthX2;
-            height: $border-width * 2;
-            background-color: $secondary-color;
-
-        }
-        // @include tr;
-    }
-
     &--reverse {
         font-size: 2.4rem;
-        left: -110px;
-        bottom: 40px;
+        letter-spacing: $spaceX4;
         transform: rotate(90deg);
         transform-origin: bottom right;
     }
 
     @media screen and (min-width: 576px) {
         display: inline-block;
-    }
-    @media screen and (min-width: 992px) {
-        // left: $line-width * 2;
-    }
-    @include hover {
-        color: $body-color;
-        background-color: transparent;
-        border-color: transparent;
     }
 }
 

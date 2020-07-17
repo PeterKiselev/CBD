@@ -58,10 +58,10 @@ var swiperTestimonials = new Swiper('.swiper-container--testimonials', {
     loop: true,
     effect: 'fade',
     lazy: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    // },
     navigation: {
         nextEl: '.swiper-buttons__next',
         prevEl: '.swiper-buttons__prev',
