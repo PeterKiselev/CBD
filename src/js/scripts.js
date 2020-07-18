@@ -4,42 +4,35 @@ function toggleMenu(e) {
     document.body.classList.toggle('menu-opened');
 }
 
-function addListenerForMobileMenuLinks(){
+// close menu onclick menu__link
+function menuLinks(){
     const navMenu = document.querySelector('.menu');
        if(window.innerWidth <= 992) {
            navMenu.addEventListener('click',function(event) {
-               let cureLink = event.target.classList.contains('menu__link');
-                   cureLink ? document.body.classList.remove('menu-opened') : null;
+               let menuLink = event.target.classList.contains('menu__link');
+                   menuLink ? document.body.classList.remove('menu-opened') : null;
            });
        }
 }
-window.addEventListener('resize',addListenerForMobileMenuLinks);
-addListenerForMobileMenuLinks();
+window.addEventListener('resize', menuLinks);
+menuLinks();
 
-// const contact = document.querySelector('.contactLink');
-// contact.addEventListener('click', toggleMenu(e){
-//     e.preventDefault();
-//     document.body.classList.toggle('menu-opened');
-// });
-
-// swiper
+// swiper products
 var swiperProducts = new Swiper('.swiper-container--products', {
-    // spaceBetween: 30,
     slidesPerGroup: 1,
     loop: true,
     autoplay: {
         delay: 4000,
-        disableOnInteraction: false,
+        disableOnInteraction: false
     },
     breakpoints: {
         320: {
-            slidesPerView: 1,
-            // spaceBetween: 20
+            slidesPerView: 1
         },
         768: {
             slidesPerView: 2,
             spaceBetween: 20,
-            slidesPerGroup: 2,
+            slidesPerGroup: 2
         },
         1170: {
             slidesPerView: 3,
@@ -49,9 +42,11 @@ var swiperProducts = new Swiper('.swiper-container--products', {
     },
     navigation: {
         nextEl: '.button-next',
-        prevEl: '.button-prev',
+        prevEl: '.button-prev'
     },
 });
+
+// swiper testimonials
 
 var swiperTestimonials = new Swiper('.swiper-container--testimonials', {
     slidesPerView: 1,
@@ -70,7 +65,7 @@ var swiperTestimonials = new Swiper('.swiper-container--testimonials', {
 });
 
 
-
+// observer jquery
 $(window).scroll(function() {
     var $sections = $('.section');
     $sections.each(function(i, el) {
@@ -86,6 +81,7 @@ $(window).scroll(function() {
     })
 });
 
+// add menu position fixed on jquery
 // $(window).scroll(function() {
 //     var height = $(window).scrollTop();
 //      /*Если сделали скролл на 100px задаём новый класс для header*/
@@ -97,6 +93,7 @@ $(window).scroll(function() {
 //     }
 // });
 
+//add menu position fixed on js
 document.addEventListener( 'scroll', function(e) {
     const menu = document.querySelector('.menu');
     if(window.pageYOffset > 100) {
