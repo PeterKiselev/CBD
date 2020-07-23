@@ -8,13 +8,13 @@
         text-align: center;
         color: $body-bg;
         min-height: 100vh;
-        background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg.jpg);
+        background-image: $gradient-bg-intro, url(../img/intro-bg.jpg);
 
         @media screen and (max-width: 992px) {
-            background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg-md.jpg);
+            background-image: $gradient-bg-intro, url(../img/intro-bg-md.jpg);
         }
         @media screen and (max-width: 576px) {
-            background-image: linear-gradient(to bottom, #a2abb5 0%, transparent 20%, transparent 100%), url(../img/intro-bg-sm.jpg);
+            background-image: $gradient-bg-intro, url(../img/intro-bg-sm.jpg);
         }
 
         @media screen and (min-width: 768px) {
@@ -50,7 +50,6 @@
                 @include tr;
             }
         }
-        
     }
 }
 
