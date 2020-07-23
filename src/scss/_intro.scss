@@ -55,7 +55,7 @@
 
 .arrow-down {
     display: inline-block;
-    @include posA($bottom: 0);
+    @include posA($left: 50%, $bottom: 0);
     @include transform;
     svg {
         fill: $secondary-color;
